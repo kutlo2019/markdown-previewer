@@ -8,7 +8,7 @@ function App() {
     <div>
       <textarea id="editor" value={input} onChange={(e) => setInput(e.target.value)}></textarea>
       <div id="preview">
-        {marked.parse(input)}  
+        <div dangerouslySetInnerHTML={{__html: marked.parse(input)}} /> 
       </div>      
     </div>
   );
